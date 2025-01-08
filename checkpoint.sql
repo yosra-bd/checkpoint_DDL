@@ -23,3 +23,12 @@ ALTER TABLE Orders ADD CONSTRAINT Order_id PRIMARY KEY (Customer_id,Product_id);
 ALTER TABLE Product ADD Category VARCHAR2(20);
 ALTER TABLE Orders ADD Order_date DATE DEFAULT = SYSDATE;
 
+INSERT INTO Product (Product_id, Product_name, Category, Price) VALUES ('P01','Samsung Galaxy S20', 'Smartphone', 3299);
+INSERT INTO Product (Product_id, Product_name, Category, Price) VALUES ('P02','ASUS Notebook', 'PC', 4599);
+
+INSERT INTO Customer (Customer_id, Customer_Name, Customer_Tel) VALUES ('C01', 'ALI', 71321009);
+INSERT INTO Customer (Customer_id, Customer_Name, Customer_Tel) VALUES ('C02', 'ASMA', 77345823);
+
+INSERT INTO Orders (Customer_id, Product_id, Order_date, Quantity, Total_Amount) VALUES ('C01','P02',NULL,2,9198);
+INSERT INTO Orders (Customer_id, Product_id, Order_date, Quantity, Total_Amount) VALUES ('C02','P01',05-20-2020,1,3299);
+
